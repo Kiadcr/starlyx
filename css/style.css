@@ -16,12 +16,41 @@ header {
 #logo {
     position: absolute;
     left: 0;
-    top: 0;
     z-index: 1000;
+    margin-top: 1vh;
     max-width: 40vw;
+    background: url(../img/01_Starlyx_Logo_Asset_White_v1.svg);
+    background-repeat: no-repeat;
 }
 
+h1 {
+    text-indent: -8000px;
+    overflow: hidden;
+}
 
+header div div {
+    align-items: center;
+}
+
+/* SECTION 01 */
+
+#section-01 article {
+    color: white;
+    border: 1px solid black;
+    background: #000000;
+    background: linear-gradient(90deg,#000000 0%, #0d014c 50%, #0b0015 100%);
+    background: -webkit-linear-gradient(90deg,#000000 0%, #0d014c 50%, #0b0015 100%);
+    background: -moz-linear-gradient(90deg,#000000 0%, #0d014c 50%, #0b0015 100%);
+    border-radius: 37px 37px 37px 37px;
+    -webkit-border-radius: 37px 37px 37px 37px;
+    -moz-border-radius: 37px 37px 37px 37px;
+    margin: 1vh;
+    padding: 2rem 0;
+}
+
+#sec-01-art-02 {
+    align-self: center;
+}
 
 @media screen and (max-width: 768px) {
     #logo {
