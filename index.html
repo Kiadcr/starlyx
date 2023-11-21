@@ -7,29 +7,28 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
+    <header class="fixed-top">
+        <div id="position" class="container">
             <div class="row">
-                <h1>Starlyx</h1>
+                <h1 id="logo">Starlyx</h1>
                 <nav class="navbar navbar-expand-md">
                 
-                    <div class="container-fluid">
+                    <div class="container-fluid justify-content-end">
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menú Hamburguesa">
                         <span class="navbar-toggler-icon"></span>
                       </button>
-                      <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+
+                      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                        <ul class="navbar-nav text-center">
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" data-ancla="80" aria-current="page" href="#art-01">Home</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" data-ancla="80" href="#art-02">Features</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <a class="nav-link" data-ancla="80" href="#art-03">Pricing</a>
                           </li>
                         </ul>
                       </div>
@@ -40,7 +39,7 @@
     </header>
     <main>
 
-        <div id="carouselExample" class="carousel slide">
+        <div id="c" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="img/01_Banner_W_Asset_v1.webp" class="d-block w-100" alt="...">
@@ -159,22 +158,49 @@
                 </div>
               </div>
         </section>
+
+        <section class="container">
+          <div class="row">
+            <article class="col-12">
+              <span id="art-01"></span>
+              <h2>Articulo 1</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero doloremque ipsam ex voluptas quidem minima cupiditate aliquid, unde perferendis voluptate non aspernatur ullam fuga quos nulla! Illo, reprehenderit iure.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero doloremque ipsam ex voluptas quidem minima cupiditate aliquid, unde perferendis voluptate non aspernatur ullam fuga quos nulla! Illo, reprehenderit iure.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero doloremque ipsam ex voluptas quidem minima cupiditate aliquid, unde perferendis voluptate non aspernatur ullam fuga quos nulla! Illo, reprehenderit iure.</p>
+            </article>
+            <article class="col-12">
+              <span id="art-02"></span>
+              <h2>Articulo 2</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero doloremque ipsam ex voluptas quidem minima cupiditate aliquid, unde perferendis voluptate non aspernatur ullam fuga quos nulla! Illo, reprehenderit iure.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero doloremque ipsam ex voluptas quidem minima cupiditate aliquid, unde perferendis voluptate non aspernatur ullam fuga quos nulla! Illo, reprehenderit iure.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero doloremque ipsam ex voluptas quidem minima cupiditate aliquid, unde perferendis voluptate non aspernatur ullam fuga quos nulla! Illo, reprehenderit iure.</p>
+            </article>
+            <article class="col-12">
+              <span id="art-03"></span>
+              <h2>Articulo 3</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero doloremque ipsam ex voluptas quidem minima cupiditate aliquid, unde perferendis voluptate non aspernatur ullam fuga quos nulla! Illo, reprehenderit iure.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero doloremque ipsam ex voluptas quidem minima cupiditate aliquid, unde perferendis voluptate non aspernatur ullam fuga quos nulla! Illo, reprehenderit iure.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero doloremque ipsam ex voluptas quidem minima cupiditate aliquid, unde perferendis voluptate non aspernatur ullam fuga quos nulla! Illo, reprehenderit iure.</p>
+            </article>
+          </div>
+        </section>
         
     </main>
-    <!--     <script>
-        const btns = document.querySelectorAll('.nav-item')
-        const barra = document.querySelector(".navbar-collapse")
-        const cierre = new bootstrap.Collapse(barra, {
-            toggle: false
-        })
-        btns.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                if(barra.classList.contains( 'show' )){
-                    cierre.toggle()
-                }
-            })
-        })
-    </script> -->
     <script src="js/bootstrap.js"></script>
+    <script src="js/marcaBoton.js"></script>
+    <script>
+      const btns = document.querySelectorAll('.nav-item')
+      const barra = document.querySelector(".navbar-collapse")
+      const cierre = new bootstrap.Collapse(barra, {
+          toggle: false
+      })
+      btns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+              if(barra.classList.contains( 'show' )){
+                  cierre.toggle()
+              }
+          })
+      })
+  </script>
 </body>
 </html>
