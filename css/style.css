@@ -35,6 +35,8 @@
   --title-barbie-pink: #F91A6B;
   --title-bright-pink: #FB649D;
   --title-gumm-pink: #FD779C;
+  --inter: #2b2b2b;
+  --white: #eceff1;
 }
 
 
@@ -272,32 +274,72 @@ ol, ul {
   background: hsla(var(--hsl), 0.1);
 }
 
+.blue {
+  color: #eceff1;
+  background-color: var(--main-blue);
+}
+
 .violet {
   color: #eceff1;
-  background-color: var(--main-op-purple);
-}
-
-.yellow {
-  color: #eceff1;
-  background-color: var(--main-op-yellow);
-}
-
-.green {
-  color: #eceff1;
-  background-color: var(--main-op-green);
+  background-color: var(--main-purple);
 }
 
 /* ACCORDION SECTION */
 
 .accordion-item {
-  background-color: var(--main-blue);
+  background-color: var(--inter);
+  border: none;
+  color: var(--white);
+}
+
+.accordion-button {
+  background-color: var(--inter);
+  border: none;
+  color: var(--white);
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--white);
+    background-color: var(--inter);
+    box-shadow: none;
 }
 
 #accordion-section {
-  background-color: var(--main-green);
+  background-color: var(--inter);
   border-radius: 16px 16px 16px 16px;
   -webkit-border-radius: 16px 16px 16px 16px;
   -moz-border-radius: 16px 16px 16px 16px;
+  border: 1px solid #eceff133;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-active-icon);
+  transform: var(--bs-accordion-btn-icon-transform);
+  color: var(--white);
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--main-black);
+}
+
+#copyright {
+  background: var(--main-blue);
 }
 
 /* SCREEN MOBILE */
