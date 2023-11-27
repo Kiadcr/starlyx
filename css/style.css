@@ -9,6 +9,35 @@
 }
 
 
+/* COLORS */
+
+:root {
+  --main-green: #00FF00;
+  --main-black: #000000;
+  --main-yellow: #FFD700;
+  --main-blue: #2C42ED;
+  --main-purple: #8B19FF;
+  --main-op-yellow: #ffd90082;
+  --main-op-purple: #8c19ff84;
+  --main-op-green: #00ff007e;
+  --secondary-op-blue: #1d26cf83;
+  --secondary-light-blue: #5550E2;
+  --secondary-blue: #1D25CF;
+  --outbound-carnage-red: #F83D33;
+  --outbound-deep-orange: #F57045;
+  --outbound-pasion-orange: #B44A32;
+  --outbound-power-yellow: #FFD732;
+  --outbound-golden-yellow: #ECC462;
+  --outbound-warm-orange: #9F6631;
+  --third-fresh-green: #14EF5B;
+  --third-apple-green: #9CDE34;
+  --third-military-green: #47984B;
+  --title-barbie-pink: #F91A6B;
+  --title-bright-pink: #FB649D;
+  --title-gumm-pink: #FD779C;
+}
+
+
 /* BODY */
 
 body {
@@ -133,9 +162,9 @@ ol, ul {
   flex: 1 1 14rem;
   padding: 1.5em 2em;
   display: grid;
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-rows: auto auto;
   align-items: start;
-  gap: 1.25em;
+  /* gap: 1.25em; */
   color: #eceff1;
   background-color: #2b2b2b;
   border: 1px solid #eceff133;
@@ -241,6 +270,34 @@ ol, ul {
 :not(.overlay) > .card:hover {
   --lightness: 95%;
   background: hsla(var(--hsl), 0.1);
+}
+
+.violet {
+  color: #eceff1;
+  background-color: var(--main-op-purple);
+}
+
+.yellow {
+  color: #eceff1;
+  background-color: var(--main-op-yellow);
+}
+
+.green {
+  color: #eceff1;
+  background-color: var(--main-op-green);
+}
+
+/* ACCORDION SECTION */
+
+.accordion-item {
+  background-color: var(--main-blue);
+}
+
+#accordion-section {
+  background-color: var(--main-green);
+  border-radius: 16px 16px 16px 16px;
+  -webkit-border-radius: 16px 16px 16px 16px;
+  -moz-border-radius: 16px 16px 16px 16px;
 }
 
 /* SCREEN MOBILE */
