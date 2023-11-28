@@ -1,3 +1,52 @@
+@keyframes sec-01 {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes sec-02 {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes sec-03 {
+	0% {
+		transform: scale(0);
+		transform-origin: 50% 100%;
+	}
+
+	100% {
+		transform: scale(1);
+		transform-origin: 50% 100%;
+	}
+}
+
+@keyframes sec-04 {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
@@ -115,6 +164,7 @@ header div div {
 
 #section-01 {
     margin: 15vh 0;
+    animation: sec-01 2s ease 2s 1 normal backwards;
 }
 
 #section-01 article {
@@ -126,6 +176,7 @@ header div div {
     -moz-border-radius: 37px 37px 37px 37px;
     margin: 1vh;
     padding: 2rem 0;
+    animation: sec-01 2s ease 2s 1 normal backwards;
 }
 
 #sec-01-art-02 {
@@ -179,6 +230,7 @@ ol, ul {
   background-color: var(--secondary-blue);
   border: 1px solid #eceff133;
   border-radius: 15px;
+  animation: sec-02 2s ease 2s 1 normal backwards;
 }
 
 .card:nth-child(1) {
@@ -330,6 +382,7 @@ ol, ul {
   background-color: var(--secondary-light-blue);
   border: none;
   color: var(--white);
+  animation: sec-03 2s ease 2s 1 normal backwards;
 }
 
 .accordion-button {
@@ -391,6 +444,7 @@ ol, ul {
   max-width: 75vw;
   margin: 0 auto 7rem;
   text-align: center;
+  animation: sec-03 2s ease 2s 1 normal backwards;
 }
 
 #sec-galeria figure a {
@@ -434,6 +488,56 @@ div h5 {
 
 footer {
   background: var(--main-black);
+  padding: 3rem 0;
+}
+
+#footer {
+	color: var(--white);
+  margin: 0 auto;
+	padding: 3rem 0 5rem 0;
+}
+
+#footer .column-heading {
+	text-transform: uppercase;
+	line-height: 1.5em;
+}
+
+#footer ul li {
+	  border-radius: 4px;
+    list-style: none;
+}
+
+#footer ul li:hover {
+	background-color: var(--main-blue);
+}
+
+#footer ul li:hover a {
+	color: var(--main-green);
+}
+
+#footer ul li a {
+  color: var(--white);
+}
+
+#facebook{
+    background-image: url(./img/icon-facebook-32px.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+#instagram{
+    background-image: url(./img/icon-instagram-32px.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+#twitter{
+    background-image: url(./img/icon-twitter-32px.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
 }
 
 #copyright {
