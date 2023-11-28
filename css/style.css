@@ -70,7 +70,7 @@ header {
     position: relative;
 }
 
-#logo {
+#logo, .logo {
     position: absolute;
     left: 0;
     top: 0;
@@ -95,7 +95,8 @@ header div div {
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-    color: #d0c7f7;
+    color: var(--main-yellow);
+    text-decoration: underline;
 }
 
 .navbar-toggler-icon {
@@ -104,6 +105,10 @@ header div div {
 
 .navbar-toggler {
     border: 1px white solid;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
 }
 
 /* SECTION 01 */
@@ -171,7 +176,7 @@ ol, ul {
   align-items: start;
   /* gap: 1.25em; */
   color: #eceff1;
-  background-color: var(--main-blue);
+  background-color: var(--secondary-blue);
   border: 1px solid #eceff133;
   border-radius: 15px;
 }
@@ -239,16 +244,8 @@ ol, ul {
   pointer-events: none;
   user-select: none;
   opacity: var(--opacity, 0);
-  -webkit-mask: radial-gradient(
-    25rem 25rem at var(--x) var(--y),
-    #000 1%,
-    transparent 50%
-  );
-  mask: radial-gradient(
-    25rem 25rem at var(--x) var(--y),
-    #000 1%,
-    transparent 50%
-  );
+  -webkit-mask: radial-gradient(25rem 25rem at var(--x) var(--y),#000 1%,transparent 50%);
+  mask: radial-gradient(25rem 25rem at var(--x) var(--y),#000 1%, transparent 50%);
   transition: 400ms mask ease;
   will-change: mask;
 }
@@ -287,6 +284,11 @@ ol, ul {
   background-color: var(--main-purple);
 }
 
+.yellow {
+  color: var(--main-black);
+  background-color: var(--main-yellow);
+}
+
 .card-whole {
   padding: 0;
   border: 1px solid #eceff133;
@@ -300,16 +302,38 @@ ol, ul {
   border-radius: 15px;
 }
 
+.fd-c {
+  flex-direction: column;
+}
+
+.profile {
+  border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  max-width: 35%;
+  border: var(--white) solid 5px;
+  margin-bottom: 1rem;
+}
+
+:not(.overlay) > .card:hover {
+  --lightness: 95%;
+  color: var(--white);
+}
+
+.card h5 {
+  font-weight: bold;
+}
+
 /* ACCORDION SECTION */
 
 .accordion-item {
-  background-color: var(--inter);
+  background-color: var(--secondary-light-blue);
   border: none;
   color: var(--white);
 }
 
 .accordion-button {
-  background-color: var(--inter);
+  background-color: var(--secondary-light-blue);
   border: none;
   color: var(--white);
   font-weight: bolder;
@@ -318,12 +342,12 @@ ol, ul {
 
 .accordion-button:not(.collapsed) {
     color: var(--white);
-    background-color: var(--inter);
+    background-color: var(--secondary-light-blue);
     box-shadow: none;
 }
 
 #accordion-section {
-  background-color: var(--inter);
+  background-color: var(--secondary-light-blue);
   border-radius: 16px 16px 16px 16px;
   -webkit-border-radius: 16px 16px 16px 16px;
   -moz-border-radius: 16px 16px 16px 16px;
@@ -332,7 +356,6 @@ ol, ul {
 
 .accordion-button:not(.collapsed)::after {
   background-image: url(../resources/caret-down-fill.svg);
-  transform: url(../resources/caret-up-fill.svg);
   color: var(--white);
 }
 
@@ -344,6 +367,11 @@ ol, ul {
 
 .text-body-secondary {
   color: var(--white)!important;
+}
+
+.card-group > .card {
+  flex: 1 0 0%;
+  margin-bottom: 0;
 }
 
 /* ASTRO SECTION */
@@ -370,7 +398,7 @@ ol, ul {
 }
 
 #sec-galeria figure a img{
-  width: calc(75vw / 2.05);
+  width: calc(75vw / 5.05);
   animation: sec-04 2s ease 2s 1 normal backwards;
 }
 
@@ -379,6 +407,27 @@ ol, ul {
   box-shadow: 0px 0px 31px 0px rgba(141,78,235,0.35);
   -webkit-box-shadow: 0px 0px 31px 0px rgba(141,78,235,0.35);
   -moz-box-shadow: 0px 0px 31px 0px rgba(141,78,235,0.35);
+}
+
+/* FORM */
+
+.form-con {
+  padding: 2rem;
+  background: var(--adder);
+  border-radius: 15px;
+  border: 1px solid #eceff133;
+}
+
+.btn-primary {
+  background: var(--main-blue);
+}
+
+.k-l {
+  border-radius: 15px;
+}
+
+div h5 {
+  font-weight: bold;
 }
 
 /* FOOTER */
@@ -390,6 +439,7 @@ footer {
 #copyright {
   background: var(--main-blue);
 }
+
 
 /* SCREEN MOBILE */
 
@@ -408,6 +458,21 @@ footer {
 
     #section-01 article {
         padding: 2rem 4rem;
+    }
+
+    .card-group > .card {
+      flex: initial;
+      margin-bottom: 0;
+    }
+
+    .card {
+      border-radius: 15px;
+      margin: 2rem 0;
+    }
+
+    #sec-galeria figure a img{
+      width: calc(75vw / 3);
+      animation: sec-04 2s ease 2s 1 normal backwards;
     }
     
 }
@@ -434,6 +499,11 @@ footer {
 
   #sec-galeria figure a img{
       width: calc(75vw / 3.5);
+  }
+
+  .card-group > .card {
+    flex: 1 0 0%;
+    margin-bottom: 0;
   }
   
 }
