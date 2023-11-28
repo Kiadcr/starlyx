@@ -440,6 +440,14 @@ footer {
   background: var(--main-blue);
 }
 
+/* FIXING */
+
+.m-section {
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+
+
 
 /* SCREEN MOBILE */
 
